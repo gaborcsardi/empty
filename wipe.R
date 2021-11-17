@@ -1,0 +1,6 @@
+.dynLibs()
+devtools::load_all()
+gc()
+devtools::load_all()
+gc()
+.dynLibs()
