@@ -28,7 +28,7 @@ jobs:
       - uses: gaborcsardi/empty/.github/actions/parameters@main
         with:
           list:
-            - foo
-            - bar
-            - "foo bar"
-            - 'foo "" bar'
+          - foo
+          - bar
+          - "foo bar"
+          - 'foo "" bar'
