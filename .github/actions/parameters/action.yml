@@ -1,0 +1,20 @@
+name: "parameters"
+description: "Test action parameters"
+author: 'Gabor Csardi'
+inputs:
+  list:
+    description: a list input
+    required: false
+    default: ''
+runs:
+  using: "composite"
+  steps:
+    - name: echo input from action
+      run: |
+        echo "${{ inputs.list }}"
+      shell: bash
+
+    - name: input in R
+      run: |
+        print("${{ inputs.list }}")
+      shell: Rscript --verbose {0}
