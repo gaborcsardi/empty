@@ -14,6 +14,13 @@ runs:
         echo "${{ inputs.list }}"
       shell: bash
 
+    - name: env var in R
+      run: |
+        cat(Sys.getenv("INPUTS_LIST"), sep = "\n")
+      shell: Rscript --verbose {0}
+      env:
+        INPUTS_LIST: ${{ inputs.list }}
+
     - name: input in R
       run: |
         print("${{ inputs.list }}")
